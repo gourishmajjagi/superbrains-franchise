@@ -1,0 +1,23 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    "editor.autoIndent": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": false
+    },
+    "editor.codeLens": false,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorStyle": "line",
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": false,
+    "editor.formatOnSave": true,
+    "editor.renderWhitespace": "none",
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 2,
+    "editor.wordWrap": "off",
+    "prettier.singleQuote": false,
+    "prettier.printWidth": 100,
+    "files.trimTrailingWhitespace": true,
+    "tslint.autoFixOnSave": true
+  }
