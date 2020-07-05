@@ -1,3 +1,14 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button (click)="pause()">
+      <ion-icon name="pause"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="start()">
+      <ion-icon name="play"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="stop()">
+      <ion-icon name="stop"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
 </ion-app>
