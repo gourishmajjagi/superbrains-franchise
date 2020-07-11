@@ -6,6 +6,10 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+  height: 100%;
+  width: 100%;
+  background: #2c2e43;
+
 }
 
 #container strong {
@@ -16,9 +20,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
-  color: #8c8c8c;
-
+  // color: #8c8c8c;
   margin: 0;
 }
 
@@ -26,7 +28,36 @@
   text-decoration: none;
 }
 
-.waves {
+#particles-js {
   width: 100% !important;
   height: 100% !important;
+}
+
+ion-tab-bar.custom-tabs {
+  --background: rgba(100, 100, 100, 0.1);
+}
+
+.image {
+  width: 160px;
+}
+
+.grid-style {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+  color: #5badd8;
+}
+
+.sub-header {
+  font-size: medium;
+  color: #5eb555;
+  margin: 16px 0px 0px 0px;
+}
+
+.btn {
+  margin: 32px 0px 0px;
 }

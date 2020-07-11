@@ -1,4 +1,34 @@
  <div id="container">
-   <!-- <div id="particles-js"></div> -->
+   <div id="particles-js"></div>
+   <div class="grid-style">
+     <ion-grid>
+       <ion-row justify-content-center align-items-center>
+         <ion-col size="12">
+           <img src="assets/img/logo.png" class="image">
+           <ion-text>
+             <p class="header">Super Brains</p>
+             <p class="sub-header">Beyond your expectations</p>
+           </ion-text>
+           <!-- <ion-button color="primary" (click)="generateToken()" class="btn">Request OTP</ion-button> -->
+         </ion-col>
+       </ion-row>
+     </ion-grid>
+   </div>
+
  </div>
- <canvas id="waves" class="waves"></canvas>
+
+
+
+ <ion-tabs>
+   <ion-tab-bar class="custom-tabs" slot="bottom">
+     <ion-tab-button (click)="pause()">
+       <ion-icon name="pause"></ion-icon>
+     </ion-tab-button>
+     <ion-tab-button (click)="start()">
+       <ion-icon name="play"></ion-icon>
+     </ion-tab-button>
+     <ion-tab-button (click)="stop()">
+       <ion-icon name="stop"></ion-icon>
+     </ion-tab-button>
+   </ion-tab-bar>
+ </ion-tabs>

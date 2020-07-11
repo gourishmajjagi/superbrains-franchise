@@ -1,5 +1,7 @@
 {
   "name": "superbrains-franchise",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
