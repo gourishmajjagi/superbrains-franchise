@@ -1,34 +1,42 @@
- <div id="container">
-   <div id="particles-js"></div>
-   <div class="grid-style">
-     <ion-grid>
-       <ion-row justify-content-center align-items-center>
-         <ion-col size="12">
-           <img src="assets/img/logo.png" class="image">
-           <ion-text>
-             <p class="header">Super Brains</p>
-             <p class="sub-header">Beyond your expectations</p>
-           </ion-text>
-           <!-- <ion-button color="primary" (click)="generateToken()" class="btn">Request OTP</ion-button> -->
-         </ion-col>
-       </ion-row>
-     </ion-grid>
-   </div>
+<div id="container">
+  <div id="particles-js"></div>
+  <div class="grid-style">
+    <ion-grid>
+      <ion-row justify-content-center align-items-center>
+        <ion-col size="12">
+          <img src="assets/img/logo.png" class="image">
+          <ion-text>
+            <p class="header">Super Brains</p>
+            <p class="sub-header">Beyond your expectations</p>
+          </ion-text>
+          <!-- <ion-button color="primary" (click)="generateToken()" class="btn">Request OTP</ion-button> -->
+        </ion-col>
+      </ion-row>
+      <ion-row class="width-100">
+        <ion-col size="12">
+          <ion-range [value]="seek" [max]="duration">
+            <ion-text class="duration-elem" slot="start">{{seek || 0}}</ion-text>
+            <ion-text class="duration-elem" slot="end">{{duration || 244}}</ion-text>
+          </ion-range>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
- </div>
+</div>
 
 
 
- <ion-tabs>
-   <ion-tab-bar class="custom-tabs" slot="bottom">
-     <ion-tab-button (click)="pause()">
-       <ion-icon name="pause"></ion-icon>
-     </ion-tab-button>
-     <ion-tab-button (click)="start()">
-       <ion-icon name="play"></ion-icon>
-     </ion-tab-button>
-     <ion-tab-button (click)="stop()">
-       <ion-icon name="stop"></ion-icon>
-     </ion-tab-button>
-   </ion-tab-bar>
- </ion-tabs>
+<ion-tabs>
+  <ion-tab-bar class="custom-tabs" slot="bottom">
+    <ion-tab-button (click)="pause()">
+      <ion-icon name="pause"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="start()">
+      <ion-icon name="play"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button (click)="stop()">
+      <ion-icon name="stop"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

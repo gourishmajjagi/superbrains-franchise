@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
-import SineWaves from 'sine-waves';
 import { PlayerService } from '../services/player.service';
 
 declare var particlesJS: any;
@@ -10,9 +9,11 @@ declare var particlesJS: any;
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, OnDestroy {
 
   state: string;
+  duration: number;
+  seek: number;
   constructor(
     private playerService: PlayerService
   ) {
@@ -23,12 +24,20 @@ export class HomePage implements OnInit {
       () => {
         console.log('callback - particles.js config loaded');
       });
+    this.playerService.duration.subscribe((secs) => this.duration = secs || 0);
+    this.playerService.seek.subscribe((secs) => this.seek = secs || 0);
+  }
+
+  ngOnDestroy() {
+    this.playerService.duration.unsubscribe();
+    this.playerService.seek.unsubscribe();
   }
 
   start() {
     if (this.state != "playing") {
       this.state = "playing";
       this.playerService.play();
+      setInterval(() => this.playerService.updateProgressBar(), 100);
     }
   }
 
