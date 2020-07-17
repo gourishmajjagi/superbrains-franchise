@@ -13,7 +13,7 @@ export class PlayerService {
   constructor() {
     this.player = new Howl(
       {
-        src: './assets/audio/audio.mp3',
+        src: './assets/audio/one.mp3',
         onplay: () => {
           console.log('play');
           this.duration.next(Math.round(this.player.duration()));
