@@ -11,7 +11,11 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "platform-add-android": "ionic cordova platform add android",
-    "platform-add-ios": "ionic cordova platform add ios"
+    "platform-add-ios": "ionic cordova platform add ios",
+    "run-android": "ionic cordova build android --prod --release",
+    "build-web": "ionic build --prod",
+    "build-android": "ionic cordova build --release android",
+    "keystore-gen": "keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000"
   },
   "private": true,
   "dependencies": {
