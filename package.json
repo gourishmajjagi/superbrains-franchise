@@ -12,10 +12,14 @@
     "e2e": "ng e2e",
     "platform-add-android": "ionic cordova platform add android",
     "platform-add-ios": "ionic cordova platform add ios",
-    "run-android": "ionic cordova build android --prod --release",
+    "run-android": "ionic cordova run android --device",
     "build-web": "ionic build --prod",
     "build-android": "ionic cordova build --release android",
-    "keystore-gen": "keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000"
+    "keystore-gen": "keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000",
+    "jar-sign": "jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore app-release-unsigned.apk alias_name",
+    "zipalign": "zipalign -v 4 app-release-unsigned.apk superbrains.apk",
+    "firebase-add": "firebase use superbrains-aef70",
+    "firebase-deploy": "firebase deploy"
   },
   "private": true,
   "dependencies": {
